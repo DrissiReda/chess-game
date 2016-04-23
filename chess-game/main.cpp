@@ -1,6 +1,6 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
-//this is a simple test
+
 int main(int argc, char *argv[])
 {
     QGuiApplication app(argc, argv);
