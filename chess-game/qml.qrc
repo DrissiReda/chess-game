@@ -1,6 +1,8 @@
 <RCC>
     <qresource prefix="/">
         <file>main.qml</file>
-        <file>MainForm.ui.qml</file>
+        <file>images/dark_square.png</file>
+        <file>images/light_square.png</file>
+        <file>Board.qml</file>
     </qresource>
 </RCC>
