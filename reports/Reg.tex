@@ -1,0 +1,164 @@
+\subsubsection{Article 1: Nature et objectifs du jeu d’échecs}
+
+\begin{enumerate}
+
+
+\item Le jeu d’échecs se joue entre deux adversaires  qui  déplacent  alternativement  des  pièces  sur  un  plateau carré appelé \texttt{échiquier}. Le joueur ayant les pièces blanches commence la partie. On dit qu’un joueur \texttt{a le trait} lorsque le coup de son adversaire a été \texttt{joué} .
+
+\item L’objectif  de chaque  joueur  est  de  placer  le  roi  adverse \texttt{sous  une  attaque} de  telle  manière  que l’adversaire n’ait aucun coup légal. On dit que le joueur qui atteint ce but a \texttt{maté} le roi adverse et gagné la partie. Laisser son roi sous une attaque, exposer son roi à une attaque et aussi \texttt{prendre} le roi adverse n'est pas autorisé. L’adversaire dont le roi a été maté a perdu la partie.
+
+\item Si la position est telle qu’aucun des deux joueurs n’a la possibilité de mater, la partie est nulle. \\
+
+\end{enumerate}
+
+\subsubsection{Article 2: La position initiale des pièces sur l’échiquier}
+
+\begin{enumerate}
+
+\item L’échiquier se compose d’une grille 8x8 de 64 cases identiques alternativement claires (les cases \texttt{blanches}) et foncées (les cases \texttt{noires}).
+L’échiquier est placé entre les joueurs de telle manière que la case d’angle à la droite de chaque joueur
+soit blanche.
+
+\item Au début d’une partie, un joueur dispose de 16 pièces claires (les pièces \texttt{blanches}) et l’autre de 16 pièces foncées (les pièces \texttt{noires}).
+
+\item La position initiale des pièces sur l'échiquier est la suivante :
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.5]{init_pos.png}
+  \caption{Position initiale des pièces}
+\end{figure}
+
+\item Les  huit  lignes  de  cases  verticales  sont  appelées \texttt{colonnes}.  Les  huit  lignes  de  cases  horizontales  sont appelées \texttt{rangées}. Une ligne droite de cases de même couleur, menant d’un bord de l’échiquier à un bord adjacent, est appelée \texttt{diagonale}.
+
+\end{enumerate}
+
+\subsubsection{Article 3: Mouvement des pièces}
+
+\begin{enumerate}
+
+\item Il n’est pas permis de déplacer une pièce sur une case occupée par une pièce de même couleur. Si une pièce se déplace sur une case occupée par une pièce adverse, cette dernière est prise et retirée de l’échiquier comme partie intégrante du coup. On dit qu’une pièce attaque une pièce adverse si elle peut éventuellement effectuer une prise sur cette case en accord avec les articles 3.2 à 3.8. Une pièce est considérée comme attaquant une case, même si cette pièce ne peut pas se déplacer sur cette case car elle mettrait ou laisserait son propre roi sous une attaque.
+
+\item Le fou se déplace sur toute case d’une diagonale sur laquelle il se trouve.
+
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.5]{fou.png}
+  \caption{Mouvement du fou}
+\end{figure}
+
+\item La tour se déplace sur toute case de la colonne ou de la rangée sur laquelle elle se trouve.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.5]{tour.png}
+  \caption{Mouvement de la tour}
+\end{figure}
+
+\item La dame se déplace sur toute case de la colonne, de la rangée ou d’une diagonale sur laquelle elle se trouve.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.5]{reine.png}
+  \caption{Mouvement de la dame}
+\end{figure}
+
+\item En effectuant ces mouvements, le fou, la tour ou la dame ne peuvent se déplacer au dessus d’aucune autre pièce.
+
+\item Le cavalier se déplace sur l’une des cases les plus proches de celle sur laquelle il se trouve, mais pas sur la même colonne, rangée ou diagonale.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.5]{cheval.png}
+  \caption{Position initiale des pièces}
+\end{figure}
+
+\item 
+    \begin{enumerate}
+        \item Le pion se déplace sur la case inoccupée immédiatement devant lui sur la même colonne, ou
+        \item à son premier coup, il peut se déplacer comme indiqué sur la figure suivante ou bien avancer de deux cases sur la même
+        colonne à condition qu’elles soient toutes deux inoccupées, ou
+        \item il se déplace sur une case occupée par une pièce adverse, située devant lui en diagonale sur une
+        colonne adjacente, et capture ainsi cette pièce.
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.5]{pion.png}
+        \caption{Mouvement du pion}
+    \end{figure}
+        
+        \item Un pion attaquant une case traversée par un pion adverse qui a avancé, d’un seul coup, de deux cases à partir de sa case initiale peut prendre ce pion comme si ce dernier n’avait avancé que d’une case.  Cette  prise n’est  légale qu’en  réponse  immédiate  à  cette  avancée  de  deux  cases  du  pion adverse. On l’appelle: \texttt{prise en passant}.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.5]{passant.png}
+        \caption{Prise en passant}
+    \end{figure}
+        \item Quand  un  pion  accède  à  la  rangée  la  plus  éloignée  de  sa  position  de  départ,  il  doit  être  échangé, comme partie intégrante du coup sur la même case, contre une nouvelle dame, tour, fou ou cavalier de la couleur du pion. Le joueur ne doit pas limiter son choix aux pièces qui ont été précédemment capturées. Cet échange d’un pion contre une autre pièce est appelé \texttt{promotion} et la pièce promue est immédiatement opérationnelle.
+    \end{enumerate}
+
+\item
+    \begin{enumerate}
+    \item Il y a deux façons différentes de déplacer le roi, soit : par un mouvement sur l’une des cases adjacentes qui n’est pas attaquée par une ou plusieurs pièces adverses
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.5]{roi.png}
+        \caption{Mouvement du roi}
+    \end{figure}
+
+    soit par le \texttt{roque}. C’est un mouvement du roi et de l’une ou l’autre des tours de la même couleur, sur la première rangée du joueur, comptant pour un seul coup du roi et effectué de la manière suivante: le roi est déplacé de deux cases à partir de sa case initiale en direction de la tour sur sa case initiale ; cette tour est ensuite déplacée sur la dernière case que le roi vient de traverser.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.5]{roque.png}
+        \caption{Mouvement du Le roque}
+    \end{figure}
+
+    \item 
+        \begin{enumerate}
+        \item Le droit de roquer est perdu :
+            \begin{enumerate}
+                \item si le roi a déjà bougé, ou
+                \item avec une tour qui a déjà bougé.
+            \end{enumerate}
+        \item Le roque est momentanément empêché :
+            \begin{enumerate}
+                \item si la case sur laquelle se trouve le roi, ou celle qu’il doit franchir, ou encore celle 
+                qu’il doit occuper, est attaquée par une ou plusieurs pièces adverses, ou
+                \item si une pièce qu
+                elconque se trouve entre le roi et la tour avec laquelle le roque doit 
+                être effectué.
+            \end{enumerate}
+        \end{enumerate}
+    \end{enumerate}
+    \item Le  roi  est  dit \texttt{en  échec}, s’il est attaqué par une ou plusieurs pièces adverses, même  si  ces  pièces  ne peuvent  elles-mêmes  bouger  sans  laisser  ou  mettre  leur  propre  roi en  échec.  Aucune  pièce  ne  peut être déplacée si elle expose le roi de la même couleur à un échec ou laisse ce roi en échec.
+\end{enumerate}
+
+\subsubsection{Article 5: La fin de la partie}
+
+\begin{enumerate}
+
+\item La partie est gagnée par le joueur qui a maté le roi adverse. Ceci met immédiatement fin à la partie
+à condition que le coup produisant la position d’échec et mat soit légal.
+
+\item La partie est gagnée par le joueur dont l’adversaire déclare qu’il abandonne. Ceci met
+immédiatement fin à la partie.
+
+\item La partie est nulle lorsque le joueur ayant le trait n’a aucun coup légal et que son roi n’est pas en
+échec. On dit alors que la partie se termine par un "pat". Ceci met immédiatement fin à la partie à
+condition que le coup produisant la position de pat soit légal.
+
+\item La partie est nulle quand une position est telle qu’aucun joueur ne peut mater le roi adverse avec
+une série de coups légaux. On dit que la partie se termine "position morte". Ceci met fin
+immédiatement à la partie à condition que le coup produisant la position soit légal.
+
+\item La partie est nulle si les deux joueurs le décident d’un commun accord pendant la partie. Ceci met
+immédiatement fin à la partie.
+
+\item La partie peut être nulle si une position identique est sur le point de survenir ou vient de survenir au
+moins trois fois sur l’échiquier.
+
+\item La partie peut être nulle si chaque joueur a joué au moins les 50 derniers coups consécutifs sans
+aucun mouvement de pion ni aucune prise.
+
+\end{enumerate}

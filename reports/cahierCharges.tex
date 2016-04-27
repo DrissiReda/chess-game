@@ -1,0 +1,117 @@
+\documentclass{article}
+
+\usepackage{graphicx}
+\usepackage{float}
+
+%\usepackage[latin1]{inputenc}
+%\usepackage[cyr]{aeguill}
+%\usepackage[francais]{babel}
+
+\author{
+    Yassir Karroum\\
+    \texttt{ukarroum17@gmail.com}
+    \and
+    Reda Driss\\
+    \texttt{reda.drissi@yahoo.fr}
+    \and
+    Abdellah Elouassif\\
+    \texttt{elouassif.28@gmail.com}
+    \and
+    Ikram Achlikhi\\
+    \texttt{ash.ikram17@gmail.com}
+    \and
+    Nassima Barakat\\
+    \texttt{nassima.bkt@gmail.com}
+    \and
+    Soukaina abelhad\\
+    \texttt{abelhad.soukaina@gmail.com}
+}
+
+\title{Cahier de charges : \texttt{Jeu d'echecs}}
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\section{Presentation du jeu}
+
+\subsection{Presentation en bref}
+
+Le \texttt{jeu d’échecs} oppose deux joueurs de part et d’autre d’un plateau ou tablier appelé \texttt{échiquier} composé de soixante-quatre cases claires et sombres nommées les cases blanches et les cases noires. Les joueurs jouent à tour de rôle en déplaçant l'une de leurs seize pièces (ou deux pièces en cas de roque), claires pour le camp des blancs, sombres pour le camp des noirs. Chaque joueur possède au départ un \texttt{roi}, une \texttt{dame}, deux \texttt{tours}, deux \texttt{fous}, deux \texttt{cavaliers} et huit \texttt{pions}. Le but du jeu est d'infliger à son adversaire un échec et mat, une situation dans laquelle le roi d'un joueur est en prise sans qu'il soit possible d'y remédier.
+
+Source: Wikipédia.
+\subsection{Regles du jeu}
+
+Cette section represente les regles du jeu qu'on a jugé les plus importantes, cette liste n'est pas exaustive pour pouvoir lire la totalité du réglement nous vous invitons à visiter le site du \texttt{FIDE} (Federation internationale des echecs).
+
+Ces articles ainsi que les images associés ont été copiés depuis le livret des regles d'echecs de la FIDE.
+
+Remarque : Nous avons délibérement sauté l'Article 4 que nous n'avons pas jugé d'aborder ici .
+
+
+\input{Reg.tex}
+
+\section{Description fonctionnelle}
+
+\subsection{Fonctionalités basiques}
+
+\subsubsection{Interface graphique}
+
+\begin{itemize}
+
+\item Affichage de l'echiquier en 2D avec les differentes piéces.
+\item Deplacement des differentes pieces via un deux clics (un premier sur la pièce et un deixieme sur la case cible).
+\item Affichage des mouvements légals (via coloration des cases).
+\item Coloration de la case du roi en rouge en cas d'Echec .
+
+\end{itemize}
+
+\subsubsection{Coeur du programme}
+
+\begin{itemize}
+
+\item Gestion des differents mouvements légales.
+\item Detection d'un echec et d'un echec et mat.
+\item Gestion des parties joueur contre joueur.
+\item Verification des régles sur les mouvements du joueur.
+\end{itemize}
+
+\subsubsection{Jeu contre ordinateur}
+
+Creation d'un algorithme permettant de jouer face à un humain .
+
+\subsection{Fonctionalités Aditionnelles}
+
+\subsubsection{Interface graphique}
+
+\begin{itemize}
+
+\item Lister les differentes pièces prises en haut et en bas de l'écran.
+\item Jouer des sons lors de l'echec, la prise, le roque, et la victoire d'un joueur (ou la défaite).
+\item Affichage d'un menu présentant les divers options du jeu.
+\item Affichage d'un temporisateur.
+\item Affichage de l'echiquier et des pièces en 3D.
+\item Déplacement des pièces via \texttt{Drag \& Drop}
+
+\end{itemize}
+
+\subsubsection{Coeur du programme}
+
+\begin{itemize}
+
+\item Gestion des scores.
+\item Parties en ligne.
+\item Proposition de challenges d'echecs.
+\item Sauvegarde des parties sous format video.
+\item Importation des parties sous format PGN.
+\item Exportation des parties sous format PGN.
+
+\end{itemize}
+
+\subsubsection{Jeu contre ordinateur}
+
+Ajout de divers Niveau de difficultés .
+
+
+\end{document}
