@@ -3,15 +3,17 @@
 \usepackage{graphicx}
 \usepackage{float}
 
-%\usepackage[latin1]{inputenc}
-%\usepackage[cyr]{aeguill}
-%\usepackage[francais]{babel}
+\usepackage{hyperref}
+
+\usepackage[utf8]{inputenc}
+\usepackage[francais]{babel}
+\usepackage[T1]{fontenc}
 
 \author{
     Yassir Karroum\\
     \texttt{ukarroum17@gmail.com}
     \and
-    Reda Driss\\
+    Reda Drissi\\
     \texttt{reda.drissi@yahoo.fr}
     \and
     Abdellah Elouassif\\
@@ -27,27 +29,30 @@
     \texttt{abelhad.soukaina@gmail.com}
 }
 
-\title{Cahier de charges : \texttt{Jeu d'echecs}}
+\title{Cahier de charges : \texttt{Jeu d'échecs}}
 \begin{document}
 
 \maketitle
 
+\newpage
+
 \tableofcontents
 
-\section{Presentation du jeu}
+\newpage
 
-\subsection{Presentation en bref}
+\section{Présentation du jeu}
 
-Le \texttt{jeu d’échecs} oppose deux joueurs de part et d’autre d’un plateau ou tablier appelé \texttt{échiquier} composé de soixante-quatre cases claires et sombres nommées les cases blanches et les cases noires. Les joueurs jouent à tour de rôle en déplaçant l'une de leurs seize pièces (ou deux pièces en cas de roque), claires pour le camp des blancs, sombres pour le camp des noirs. Chaque joueur possède au départ un \texttt{roi}, une \texttt{dame}, deux \texttt{tours}, deux \texttt{fous}, deux \texttt{cavaliers} et huit \texttt{pions}. Le but du jeu est d'infliger à son adversaire un échec et mat, une situation dans laquelle le roi d'un joueur est en prise sans qu'il soit possible d'y remédier.
+\subsection{Présentation en bref}
 
-Source: Wikipédia.
-\subsection{Regles du jeu}
+Le \texttt{jeu d’échecs} oppose deux joueurs de part et d’autre d’un plateau ou tablier appelé \texttt{échiquier} composé de soixante-quatre cases claires et sombres nommées les cases blanches et les cases noires. Les joueurs jouent à tour de rôle en déplaçant l'une de leurs seize pièces (ou deux pièces en cas de roque), claires pour le camp des blancs, sombres pour le camp des noirs. Chaque joueur possède au départ un \texttt{roi}, une \texttt{dame}, deux \texttt{tours}, deux \texttt{fous}, deux \texttt{cavaliers} et huit \texttt{pions}. Le but du jeu est d'infliger à son adversaire un échec et mat, une situation dans laquelle le roi d'un joueur est en prise sans qu'il soit possible d'y remédier \cite{wikiEchecs}.
 
-Cette section represente les regles du jeu qu'on a jugé les plus importantes, cette liste n'est pas exaustive pour pouvoir lire la totalité du réglement nous vous invitons à visiter le site du \texttt{FIDE} (Federation internationale des echecs).
+\subsection{Régles du jeu}
 
-Ces articles ainsi que les images associés ont été copiés depuis le livret des regles d'echecs de la FIDE.
+Cette section représente les régles du jeu qu'on a jugé les plus importantes, cette liste n'est pas exaustive, pour pouvoir lire la totalité du réglement nous vous invitons à visiter le site du \texttt{FIDE} (Fédération internationale des echecs) \cite{fide}.
 
-Remarque : Nous avons délibérement sauté l'Article 4 que nous n'avons pas jugé d'aborder ici .
+Ces articles ainsi que les images associés ont été copiés depuis le livret des régles d'échecs de la FIDE \cite{livreFide}.
+
+Remarque : Nous avons délibérément omis l'Article 4 car nous n'avons pas jugé important de l'aborder ici .
 
 
 \input{Reg.tex}
@@ -60,8 +65,8 @@ Remarque : Nous avons délibérement sauté l'Article 4 que nous n'avons pas jug
 
 \begin{itemize}
 
-\item Affichage de l'echiquier en 2D avec les differentes piéces.
-\item Deplacement des differentes pieces via un deux clics (un premier sur la pièce et un deixieme sur la case cible).
+\item Affichage de l'échiquier en 2D avec les différentes pièces.
+\item Déplacement des différentes pièces via un deux clics (un premier sur la pièce et un deuxième sur la case cible).
 \item Affichage des mouvements légals (via coloration des cases).
 \item Coloration de la case du roi en rouge en cas d'Echec .
 
@@ -71,8 +76,8 @@ Remarque : Nous avons délibérement sauté l'Article 4 que nous n'avons pas jug
 
 \begin{itemize}
 
-\item Gestion des differents mouvements légales.
-\item Detection d'un echec et d'un echec et mat.
+\item Gestion des différents mouvements légaux.
+\item Détection d'un échec et d'un échec et mat.
 \item Gestion des parties joueur contre joueur.
 \item Verification des régles sur les mouvements du joueur.
 \end{itemize}
@@ -88,10 +93,10 @@ Creation d'un algorithme permettant de jouer face à un humain .
 \begin{itemize}
 
 \item Lister les differentes pièces prises en haut et en bas de l'écran.
-\item Jouer des sons lors de l'echec, la prise, le roque, et la victoire d'un joueur (ou la défaite).
+\item Jouer des sons lors de l'échec, la prise, le roque, et la victoire d'un joueur (ou la défaite).
 \item Affichage d'un menu présentant les divers options du jeu.
 \item Affichage d'un temporisateur.
-\item Affichage de l'echiquier et des pièces en 3D.
+\item Affichage de l'échiquier et des pièces en 3D.
 \item Déplacement des pièces via \texttt{Drag \& Drop}
 
 \end{itemize}
@@ -102,7 +107,7 @@ Creation d'un algorithme permettant de jouer face à un humain .
 
 \item Gestion des scores.
 \item Parties en ligne.
-\item Proposition de challenges d'echecs.
+\item Proposition de challenges d'échécs.
 \item Sauvegarde des parties sous format video.
 \item Importation des parties sous format PGN.
 \item Exportation des parties sous format PGN.
@@ -111,7 +116,58 @@ Creation d'un algorithme permettant de jouer face à un humain .
 
 \subsubsection{Jeu contre ordinateur}
 
-Ajout de divers Niveau de difficultés .
+Ajout de divers Niveau de difficulté .
 
+\section{Choix technologiques}
+
+\subsection{Framework Qt}
+
+Nous avons opté pour le framework Qt \cite{qt} notament dù à sa robustesse à sa bibliotheque trés riche (KDE par exemple ainsi qu'un trés grand nombre d'applicatins célébres ont été dévlopés avec ce dernier).
+
+Il est gratuit, trés bien documenté .
+
+Le seul inconvéniant d'utiliser Qt est le fait de devoir développer ses programmes sous license LGPL (est donc opensource) mais cela ne nous cause aucun problème, ce choix est donc parfait pour nos besoin .
+
+Nous avons notament choisi de dévlopper notre projet avec la version 5.6 (la dernière version en ce moment).
+
+Nous utilisons aussi l'IDE Qt Creator \cite{qtcreator}.
+
+\subsection{Plateforme Collaborative GitHub}
+
+Nous avons aussi opté pour Github \cite{github} (une plateforme utilisant Git \cite{git} ), pour pouvoir travailler collobarativement sur le meme code de facon mieux organisé.
+
+\subsection{LaTeX}
+
+Pour la rédaction des rapports, nous avons opté pour LaTeX \cite{latex} (les fichiers sources .tex sont également visible sur le repo du projet).
+
+\newpage
+
+\begin{thebibliography}{9}
+
+\bibitem{wikiEchecs}
+\url{https://fr.wikipedia.org/wiki/%C3%89checs}
+
+\bibitem{fide}
+\url{https://www.fide.com/}
+
+\bibitem{livreFide}
+\url{http://www.echecs.asso.fr/LivreArbitre/110.pdf}
+
+\bibitem{qt}
+\url{http://www.qt.io/}
+
+\bibitem{qtcreator}
+\url{https://www.qt.io/ide/}
+
+\bibitem{github}
+\url{https://github.com/}
+
+\bibitem{git}
+\url{https://git-scm.com/}
+
+\bibitem{latex}
+\url{https://www.latex-project.org/}
+
+\end{thebibliography}
 
 \end{document}
