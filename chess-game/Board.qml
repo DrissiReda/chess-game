@@ -78,10 +78,16 @@ Item {
             /* =================== Fonctions =========================== */
 
             function getX(x){
-                return 45*x
+                return 45*x;
             }
             function getY(y){
                 return (7 - y)*45;
+            }
+            function movePiece(piece)
+            {
+                x = piece.x / 45;
+                y = (piece.y / 45) - 7;
+                grid.children[x].children[y].children[0].source = ((x + y) % 2 == 0) ? "images/click_light" : "images/click_right";
             }
     }
 
@@ -100,6 +106,10 @@ Item {
             source: "images/white_pawn.png"
             x: grid.getX(index)
             y: grid.getY(1)
+            MouseArea{
+                anchors.fill: parent
+                onClicked: grid.movePiece(white_pawn)
+            }
 
         }
     }
@@ -112,6 +122,7 @@ Item {
         source: "images/white_rook.png"
         x: grid.getX(0)
         y: grid.getY(0)
+
     }
 
     Image {

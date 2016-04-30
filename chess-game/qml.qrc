@@ -16,5 +16,7 @@
         <file>images/black_pawn.png</file>
         <file>images/black_queen.png</file>
         <file>images/black_rook.png</file>
+        <file>images/click_dark.png</file>
+        <file>images/click_light.png</file>
     </qresource>
 </RCC>
