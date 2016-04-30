@@ -130,6 +130,7 @@ Item {
                             if(grid.blackPcs[prop][i][0] == x && grid.blackPcs[prop][i][1] == y)
                             {
 
+
                                 root.children[j].source="images/Threat_"+prop+".png";
                                 return 0;
                              }
