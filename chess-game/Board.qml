@@ -32,20 +32,23 @@ Item {
         columnSpacing: 0
 
         //Deux dictionnaires qui contiennt les positions des pieces blanches et noires
-        property variant blackPcs: { 'pawns' : [[6, 0], [6, 1], [6, 2], [6, 3], [6, 4], [6, 5], [6, 6], [6, 7]],
-                                     'rock' : [[7, 0], [7, 7]],
-                                     'knights' : [[7, 1], [7, 6]],
+        property variant blackPcs: { 'pawn' : [[6, 0], [6, 1], [6, 2], [6, 3], [6, 4], [6, 5], [6, 6], [6, 7]],
+                                     'rook' : [[7, 0], [7, 7]],
+                                     'knight' : [[7, 1], [7, 6]],
                                      'bishop' : [[7, 2], [7, 5]],
-                                     'queen' : [7, 3],
-                                     'king' : [7, 4]
+                                     'queen' : [[7, 3]],
+                                     'king' : [[7, 4]]
                                        }
 
-        property variant whitePcs: { 'pawns' : [[1, 0], [1, 1], [1, 2], [1, 3], [1, 4], [1, 5], [1, 6], [1, 7]],
-                                     'rock' : [[0, 0], [0, 7]],
-                                     'knights' : [[0, 1], [0, 6]],
+        property variant whitePcs: {
+
                                      'bishop' : [[0, 2], [0, 5]],
-                                     'queen' : [0, 3],
-                                     'king' : [0, 4]
+                                     'king'   : [[0, 4]],
+                                     'knight' : [[0, 1], [0, 6]],
+                                     'pawn'   : [[1, 0], [1, 1], [1, 2], [1, 3], [1, 4], [1, 5], [1, 6], [1, 7]],
+                                     'queen'  : [[0, 3]],
+                                     'rook'   : [[0, 0], [0, 7]]
+
                                        }
         //generation des divers case via deux Repeaters : le premier pour les lignes, le deuxieme pour les collones
         Repeater {
@@ -83,17 +86,120 @@ Item {
             function getY(y){
                 return (7 - y)*45;
             }
+            function availableMove(x,y)
+            {
+
+                (!((x+7-y) % 2))
+                ? grid.children[x].children[7-y].children[0].source="images/avail_light.png"
+                : grid.children[x].children[7-y].children[0].source="images/avail_dark.png";
+                return 0;
+
+                }
+            function threatPiece(x,y)
+            {
+                    var j=0;
+
+                   for(var prop in grid.whitePcs)
+                   {
+                        for(var i=0;i<grid.whitePcs[prop].length;i++)
+                        {
+
+                            j++;
+                            console.log(grid.children[j] + " " + j );
+
+
+                            if(grid.whitePcs[prop][i][0] === x && grid.whitePcs[prop][i][1] === y)
+                               {
+                                console.log(root.children[0].source);
+
+                                root.children[j].source="images/Threat_"+prop+".png";
+
+
+
+                                }
+                            }
+                   }
+
+
+
+                   j=0;
+                   for(prop in grid.blackPcs)
+                   {
+
+                        for(i=0;i<grid.blackPcs[prop].length;i++)
+                        {
+                            j++;
+                            if(grid.blackPcs[prop][i][0] == x && grid.blackPcs[prop][i][1] == y)
+                            {
+
+                                root.children[j].source="images/Threat_"+prop+".png";
+                                return 0;
+                             }
+                        }
+                   }
+                   return 0;
+            }
+
+            Rectangle {
+                    width : grid.threatPiece(0,3);
+                }
     }
+
 
     /* ====================== Pieces du jeu ====================== */
 
     /* ============ Pieces blanches ================= */
 
-    /* ==== Pions Blancs ========== */
 
-    Repeater{
-        model: 8
 
+
+        /* ======= Fous Blancs ======= */
+
+        Image {
+            id: white_bishop1
+            width: 45; height: 45
+            source: "images/white_bishop.png"
+            x: grid.getX(2)
+            y: grid.getY(0)
+        }
+
+        Image {
+            id: white_bishop2
+            width: 45; height: 45
+            source: "images/white_bishop.png"
+            x: grid.getX(5)
+            y: grid.getY(0)
+        }
+        /* ========= Roi Blanc ============== */
+        Image {
+            id: white_king
+            width: 45; height: 45
+            source: "images/white_king.png"
+            x: grid.getX(4)
+            y: grid.getY(0)
+        }
+        /* ===== Chevaux Blancs ======= */
+
+        Image {
+            id: white_knight1
+            width: 45; height: 45
+            source: "images/white_knight.png"
+            x: grid.getX(1)
+            y: grid.getY(0)
+        }
+
+        Image {
+            id: white_knight2
+            width: 45; height: 45
+            source: "images/white_knight.png"
+            x: grid.getX(6)
+            y: grid.getY(0)
+        }
+
+        Repeater{
+            model: 8
+
+          /* ==== Pions Blancs ========== */
         Image {
             id: white_pawn
             width: 45; height: 45
@@ -103,6 +209,15 @@ Item {
 
         }
     }
+    /* ======= Reine blanche =========== */
+    Image {
+        id: white_queen
+        width: 45; height: 45
+        source: "images/white_queen.png"
+        x: grid.getX(3)
+        y: grid.getY(0)
+    }
+
 
     /* ==== Tours Blanches === */
 
@@ -122,59 +237,10 @@ Item {
         y: grid.getY(0)
     }
 
-    /* ===== Chevaux Blancs ======= */
 
-    Image {
-        id: white_knight1
-        width: 45; height: 45
-        source: "images/white_knight.png"
-        x: grid.getX(1)
-        y: grid.getY(0)
-    }
 
-    Image {
-        id: white_knight2
-        width: 45; height: 45
-        source: "images/white_knight.png"
-        x: grid.getX(6)
-        y: grid.getY(0)
-    }
 
-    /* ======= Fous Blancs ======= */
 
-    Image {
-        id: white_bishop1
-        width: 45; height: 45
-        source: "images/white_bishop.png"
-        x: grid.getX(2)
-        y: grid.getY(0)
-    }
-
-    Image {
-        id: white_bishop2
-        width: 45; height: 45
-        source: "images/white_bishop.png"
-        x: grid.getX(5)
-        y: grid.getY(0)
-    }
-
-    /* ======= Reine blanche =========== */
-    Image {
-        id: white_queen
-        width: 45; height: 45
-        source: "images/white_queen.png"
-        x: grid.getX(3)
-        y: grid.getY(0)
-    }
-
-    /* ========= Roi Blanc ============== */
-    Image {
-        id: white_king
-        width: 45; height: 45
-        source: "images/white_king.png"
-        x: grid.getX(4)
-        y: grid.getY(0)
-    }
 
 
     /* ============ Pieces noires ================= */

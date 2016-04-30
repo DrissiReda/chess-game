@@ -16,5 +16,13 @@
         <file>images/black_pawn.png</file>
         <file>images/black_queen.png</file>
         <file>images/black_rook.png</file>
+        <file>images/avail_dark.png</file>
+        <file>images/avail_light.png</file>
+        <file>images/Threat_bishop.png</file>
+        <file>images/Threat_knight.png</file>
+        <file>images/Threat_pawn.png</file>
+        <file>images/Threat_queen.png</file>
+        <file>images/Threat_rook.png</file>
+        <file>images/Threat_king.png</file>
     </qresource>
 </RCC>
