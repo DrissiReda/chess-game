@@ -82,7 +82,7 @@ Item {
         Image {
             id: white_pawn
             width: 45; height: 45
-            source: "images/pion.png"
+            source: "images/white_pawn.png"
             x: grid.getX(index)
             y: grid.getY(1)
 

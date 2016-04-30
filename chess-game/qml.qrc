@@ -4,6 +4,6 @@
         <file>images/dark_square.png</file>
         <file>images/light_square.png</file>
         <file>Board.qml</file>
-        <file>images/pion.png</file>
+        <file>images/white_pawn.png</file>
     </qresource>
 </RCC>
