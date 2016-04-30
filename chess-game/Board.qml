@@ -105,12 +105,10 @@ Item {
                         {
 
                             j++;
-                            console.log(grid.children[j] + " " + j );
 
 
                             if(grid.whitePcs[prop][i][0] === x && grid.whitePcs[prop][i][1] === y)
                                {
-                                console.log(root.children[0].source);
 
                                 root.children[j].source="images/Threat_"+prop+".png";
 
@@ -140,9 +138,7 @@ Item {
                    return 0;
             }
 
-            Rectangle {
-                    width : grid.threatPiece(0,3);
-                }
+
     }
 
 
@@ -158,64 +154,193 @@ Item {
         Image {
             id: white_bishop1
             width: 45; height: 45
-            source: "images/white_bishop.png"
+            source: mouseArea.containsMouse ?"images/Click_dark_white_bishop.png" : "images/white_bishop.png"
             x: grid.getX(2)
             y: grid.getY(0)
-        }
 
+
+            MouseArea {
+                    id : mouseArea
+                    anchors.fill : parent
+                    hoverEnabled : true
+            }
+
+        }
         Image {
+
             id: white_bishop2
             width: 45; height: 45
-            source: "images/white_bishop.png"
+            source: mouseArea1.containsMouse ?"images/Click_light_white_bishop.png" : "images/white_bishop.png"
             x: grid.getX(5)
             y: grid.getY(0)
+            MouseArea {
+                    id : mouseArea1
+                    anchors.fill : parent
+                    hoverEnabled : true
+            }
+
         }
         /* ========= Roi Blanc ============== */
         Image {
             id: white_king
             width: 45; height: 45
-            source: "images/white_king.png"
+            source: mouseArea2.containsMouse ?"images/Click_dark_white_king.png" : "images/white_king.png"
             x: grid.getX(4)
             y: grid.getY(0)
+            MouseArea {
+                    id : mouseArea2
+                    anchors.fill : parent
+                    hoverEnabled : true
+            }
         }
         /* ===== Chevaux Blancs ======= */
 
         Image {
             id: white_knight1
             width: 45; height: 45
-            source: "images/white_knight.png"
+            source: mouseArea3.containsMouse ?"images/Click_light_white_knight.png" : "images/white_knight.png"
             x: grid.getX(1)
             y: grid.getY(0)
+            MouseArea {
+                    id : mouseArea3
+                    anchors.fill : parent
+                    hoverEnabled : true
+            }
         }
 
         Image {
             id: white_knight2
             width: 45; height: 45
-            source: "images/white_knight.png"
+            source: mouseArea4.containsMouse ?"images/Click_dark_white_knight.png" : "images/white_knight.png"
             x: grid.getX(6)
             y: grid.getY(0)
+            MouseArea {
+                    id : mouseArea4
+                    anchors.fill : parent
+                    hoverEnabled : true
+            }
         }
 
-        Repeater{
-            model: 8
+
 
           /* ==== Pions Blancs ========== */
         Image {
-            id: white_pawn
+            id: white_pawn1
             width: 45; height: 45
-            source: "images/white_pawn.png"
-            x: grid.getX(index)
+            source: mouseArea51.containsMouse ?"images/Click_light_white_pawn.png" : "images/white_pawn.png"
+            x: grid.getX(0)
             y: grid.getY(1)
+            MouseArea {
+                    id : mouseArea51
+                    anchors.fill : parent
+                    hoverEnabled : true
+            }
 
         }
-    }
+        Image {
+            id: white_pawn2
+            width: 45; height: 45
+            source: mouseArea52.containsMouse ?"images/Click_dark_white_pawn.png" : "images/white_pawn.png"
+            x: grid.getX(1)
+            y: grid.getY(1)
+            MouseArea {
+                    id : mouseArea52
+                    anchors.fill : parent
+                    hoverEnabled : true
+            }
+
+        }
+        Image {
+            id: white_pawn3
+            width: 45; height: 45
+            source: mouseArea53.containsMouse ?"images/Click_light_white_pawn.png" : "images/white_pawn.png"
+            x: grid.getX(2)
+            y: grid.getY(1)
+            MouseArea {
+                    id : mouseArea53
+                    anchors.fill : parent
+                    hoverEnabled : true
+            }
+
+        }
+        Image {
+            id: white_pawn4
+            width: 45; height: 45
+           source: mouseArea54.containsMouse ?"images/Click_dark_white_pawn.png" : "images/white_pawn.png"
+            x: grid.getX(3)
+            y: grid.getY(1)
+            MouseArea {
+                    id : mouseArea54
+                    anchors.fill : parent
+                    hoverEnabled : true
+            }
+
+        }
+        Image {
+            id: white_pawn5
+            width: 45; height: 45
+            source: mouseArea55.containsMouse ?"images/Click_light_white_pawn.png" : "images/white_pawn.png"
+            x: grid.getX(4)
+            y: grid.getY(1)
+            MouseArea {
+                    id : mouseArea55
+                    anchors.fill : parent
+                    hoverEnabled : true
+            }
+
+        }
+        Image {
+            id: white_pawn6
+            width: 45; height: 45
+            source: mouseArea56.containsMouse ?"images/Click_dark_white_pawn.png" : "images/white_pawn.png"
+            x: grid.getX(5)
+            y: grid.getY(1)
+            MouseArea {
+                    id : mouseArea56
+                    anchors.fill : parent
+                    hoverEnabled : true
+            }
+
+        }
+        Image {
+            id: white_pawn7
+            width: 45; height: 45
+            source: mouseArea57.containsMouse ?"images/Click_light_white_pawn.png" : "images/white_pawn.png"
+            x: grid.getX(6)
+            y: grid.getY(1)
+            MouseArea {
+                    id : mouseArea57
+                    anchors.fill : parent
+                    hoverEnabled : true
+            }
+
+        }
+        Image {
+            id: white_pawn8
+            width: 45; height: 45
+            source: mouseArea58.containsMouse ?"images/Click_dark_white_pawn.png" : "images/white_pawn.png"
+            x: grid.getX(7)
+            y: grid.getY(1)
+            MouseArea {
+                    id : mouseArea58
+                    anchors.fill : parent
+                    hoverEnabled : true
+            }
+
+        }
+
     /* ======= Reine blanche =========== */
     Image {
         id: white_queen
         width: 45; height: 45
-        source: "images/white_queen.png"
+        source: mouseArea6.containsMouse ?"images/Click_light_white_queen.png" : "images/white_queen.png"
         x: grid.getX(3)
         y: grid.getY(0)
+        MouseArea {
+                id : mouseArea6
+                anchors.fill : parent
+                hoverEnabled : true
+        }
     }
 
 
@@ -224,17 +349,27 @@ Item {
     Image {
         id: white_rock1
         width: 45; height: 45
-        source: "images/white_rook.png"
+       source: mouseArea7.containsMouse ?"images/Click_dark_white_rook.png" : "images/white_rook.png"
         x: grid.getX(0)
         y: grid.getY(0)
+        MouseArea {
+                id : mouseArea7
+                anchors.fill : parent
+                hoverEnabled : true
+        }
     }
 
     Image {
         id: white_rock2
         width: 45; height: 45
-        source: "images/white_rook.png"
+        source: mouseArea8.containsMouse ?"images/Click_light_white_rook.png" : "images/white_rook.png"
         x: grid.getX(7)
         y: grid.getY(0)
+        MouseArea {
+                id : mouseArea8
+                anchors.fill : parent
+                hoverEnabled : true
+        }
     }
 
 
