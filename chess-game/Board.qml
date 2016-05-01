@@ -147,6 +147,12 @@ Item {
 
 
     }
+                        function sqColor(x,y)
+                        {
+
+                            if ((x+y)%2) return "dark";
+                            else return "light";
+                        }
 
 
     /* ====================== Pieces du jeu ====================== */
@@ -161,7 +167,7 @@ Item {
         Image {
             id: white_bishop1
             width: 45; height: 45
-            source: mouseArea.containsMouse ?"images/Click_dark_white_bishop.png" : "images/white_bishop.png"
+            source: mouseArea.containsMouse ? "images/Click_"+sqColor(white_bishop1.x,white_bishop1.y)+"_white_bishop.png" : "images/white_bishop.png"
             x: grid.getX(2)
             y: grid.getY(0)
 
@@ -170,6 +176,7 @@ Item {
                     id : mouseArea
                     anchors.fill : parent
                     hoverEnabled : true
+
             }
 
         }
@@ -177,7 +184,7 @@ Item {
 
             id: white_bishop2
             width: 45; height: 45
-            source: mouseArea1.containsMouse ?"images/Click_light_white_bishop.png" : "images/white_bishop.png"
+            source: mouseArea1.containsMouse ?"images/Click_"+sqColor(white_bishop2.x,white_bishop2.y)+"_white_bishop.png" : "images/white_bishop.png"
             x: grid.getX(5)
             y: grid.getY(0)
             MouseArea {
@@ -191,7 +198,7 @@ Item {
         Image {
             id: white_king
             width: 45; height: 45
-            source: mouseArea2.containsMouse ?"images/Click_dark_white_king.png" : "images/white_king.png"
+            source: mouseArea2.containsMouse ?"images/Click_"+sqColor(white_king.x,white_king.y)+"_white_king.png" : "images/white_king.png"
             x: grid.getX(4)
             y: grid.getY(0)
             MouseArea {
@@ -205,7 +212,7 @@ Item {
         Image {
             id: white_knight1
             width: 45; height: 45
-            source: mouseArea3.containsMouse ?"images/Click_light_white_knight.png" : "images/white_knight.png"
+            source: mouseArea3.containsMouse ?"images/Click_"+sqColor(white_knight1.x,white_knight1.y)+"_white_knight.png" : "images/white_knight.png"
             x: grid.getX(1)
             y: grid.getY(0)
             MouseArea {
@@ -218,7 +225,7 @@ Item {
         Image {
             id: white_knight2
             width: 45; height: 45
-            source: mouseArea4.containsMouse ?"images/Click_dark_white_knight.png" : "images/white_knight.png"
+            source: mouseArea4.containsMouse ?"images/Click_"+sqColor(white_knight2.x,white_knight2.y)+"_white_knight.png" : "images/white_knight.png"
             x: grid.getX(6)
             y: grid.getY(0)
             MouseArea {
@@ -230,11 +237,11 @@ Item {
 
 
 
-          /* ==== Pions Blancs ========== */
+          /* ==== Pions Noirs ========== */
         Image {
             id: white_pawn1
             width: 45; height: 45
-            source: mouseArea51.containsMouse ?"images/Click_light_white_pawn.png" : "images/white_pawn.png"
+            source: mouseArea51.containsMouse ?"images/Click_"+sqColor(white_pawn1.x,white_pawn1.y)+"_white_pawn.png" : "images/white_pawn.png"
             x: grid.getX(0)
             y: grid.getY(1)
 
@@ -248,7 +255,7 @@ Item {
         Image {
             id: white_pawn2
             width: 45; height: 45
-            source: mouseArea52.containsMouse ?"images/Click_dark_white_pawn.png" : "images/white_pawn.png"
+            source: mouseArea52.containsMouse ?"images/Click_"+sqColor(white_pawn2.x,white_pawn2.y)+"_white_pawn.png" : "images/white_pawn.png"
             x: grid.getX(1)
             y: grid.getY(1)
             MouseArea {
@@ -261,7 +268,7 @@ Item {
         Image {
             id: white_pawn3
             width: 45; height: 45
-            source: mouseArea53.containsMouse ?"images/Click_light_white_pawn.png" : "images/white_pawn.png"
+            source: mouseArea53.containsMouse ?"images/Click_"+sqColor(white_pawn3.x,white_pawn3.y)+"_white_pawn.png" : "images/white_pawn.png"
             x: grid.getX(2)
             y: grid.getY(1)
             MouseArea {
@@ -274,7 +281,7 @@ Item {
         Image {
             id: white_pawn4
             width: 45; height: 45
-           source: mouseArea54.containsMouse ?"images/Click_dark_white_pawn.png" : "images/white_pawn.png"
+           source: mouseArea54.containsMouse ?"images/Click_"+sqColor(white_pawn4.x,white_pawn4.y)+"_white_pawn.png" : "images/white_pawn.png"
             x: grid.getX(3)
             y: grid.getY(1)
             MouseArea {
@@ -287,7 +294,7 @@ Item {
         Image {
             id: white_pawn5
             width: 45; height: 45
-            source: mouseArea55.containsMouse ?"images/Click_light_white_pawn.png" : "images/white_pawn.png"
+            source: mouseArea55.containsMouse ?"images/Click_"+sqColor(white_pawn5.x,white_pawn5.y)+"_white_pawn.png" : "images/white_pawn.png"
             x: grid.getX(4)
             y: grid.getY(1)
             MouseArea {
@@ -300,7 +307,7 @@ Item {
         Image {
             id: white_pawn6
             width: 45; height: 45
-            source: mouseArea56.containsMouse ?"images/Click_dark_white_pawn.png" : "images/white_pawn.png"
+            source: mouseArea56.containsMouse ?"images/Click_"+sqColor(white_pawn6.x,white_pawn6.y)+"_white_pawn.png" : "images/white_pawn.png"
             x: grid.getX(5)
             y: grid.getY(1)
             MouseArea {
@@ -313,7 +320,7 @@ Item {
         Image {
             id: white_pawn7
             width: 45; height: 45
-            source: mouseArea57.containsMouse ?"images/Click_light_white_pawn.png" : "images/white_pawn.png"
+            source: mouseArea57.containsMouse ?"images/Click_"+sqColor(white_pawn7.x,white_pawn7.y)+"_white_pawn.png" : "images/white_pawn.png"
             x: grid.getX(6)
             y: grid.getY(1)
             MouseArea {
@@ -326,7 +333,7 @@ Item {
         Image {
             id: white_pawn8
             width: 45; height: 45
-            source: mouseArea58.containsMouse ?"images/Click_dark_white_pawn.png" : "images/white_pawn.png"
+            source: mouseArea58.containsMouse ?"images/Click_"+sqColor(white_pawn8.x,white_pawn8.y)+"_white_pawn.png" : "images/white_pawn.png"
             x: grid.getX(7)
             y: grid.getY(1)
             MouseArea {
@@ -341,7 +348,7 @@ Item {
     Image {
         id: white_queen
         width: 45; height: 45
-        source: mouseArea6.containsMouse ?"images/Click_light_white_queen.png" : "images/white_queen.png"
+        source: mouseArea6.containsMouse ?"images/Click_"+sqColor(white_queen.x,white_queen.y)+"_white_queen.png" : "images/white_queen.png"
         x: grid.getX(3)
         y: grid.getY(0)
         MouseArea {
@@ -355,9 +362,9 @@ Item {
     /* ==== Tours Blanches === */
 
     Image {
-        id: white_rock1
+        id: white_rook1
         width: 45; height: 45
-       source: mouseArea7.containsMouse ?"images/Click_dark_white_rook.png" : "images/white_rook.png"
+       source: mouseArea7.containsMouse ?"images/Click_"+sqColor(white_rook1.x,white_rook1.y)+"_white_rook.png" : "images/white_rook.png"
         x: grid.getX(0)
         y: grid.getY(0)
         MouseArea {
@@ -368,9 +375,9 @@ Item {
     }
 
     Image {
-        id: white_rock2
+        id: white_rook2
         width: 45; height: 45
-        source: mouseArea8.containsMouse ?"images/Click_light_white_rook.png" : "images/white_rook.png"
+        source: mouseArea8.containsMouse ?"images/Click_"+sqColor(white_rook2.x,white_rook2.y)+"_white_rook.png" : "images/white_rook.png"
         x: grid.getX(7)
         y: grid.getY(0)
         MouseArea {
@@ -383,97 +390,231 @@ Item {
 
 
 
+/**************************Pieces Noires*****************************************/
 
 
 
-    /* ============ Pieces noires ================= */
+    Image {
+        id: black_bishop1
+        width: 45; height: 45
+        source: mouseAreaB.containsMouse ?"images/Click_"+sqColor(black_bishop1.x,black_bishop1.y)+"_black_bishop.png" : "images/black_bishop.png"
+        x: grid.getX(2)
+        y: grid.getY(7-0)
 
-    /* ==== Pions noirs ========== */
 
-    Repeater{
-        model: 8
+        MouseArea {
+                id : mouseAreaB
+                anchors.fill : parent
+                hoverEnabled : true
+        }
 
-        Image {
-            id: black_pawn
-            width: 45; height: 45
-            source: "images/black_pawn.png"
-            x: grid.getX(index)
-            y: grid.getY(6)
+    }
+    Image {
 
+        id: black_bishop2
+        width: 45; height: 45
+        source: mouseAreaB1.containsMouse ?"images/Click_"+sqColor(black_bishop2.x,black_bishop2.y)+"_black_bishop.png" : "images/black_bishop.png"
+        x: grid.getX(5)
+        y: grid.getY(7-0)
+        MouseArea {
+                id : mouseAreaB1
+                anchors.fill : parent
+                hoverEnabled : true
+        }
+
+    }
+    /* ========= Roi Noir ============== */
+    Image {
+        id: black_king
+        width: 45; height: 45
+        source: mouseAreaB2.containsMouse ?"images/Click_"+sqColor(black_king.x,black_king.y)+"_black_king.png" : "images/black_king.png"
+        x: grid.getX(4)
+        y: grid.getY(7-0)
+        MouseArea {
+                id : mouseAreaB2
+                anchors.fill : parent
+                hoverEnabled : true
         }
     }
-
-    /* ==== Tours Blanches === */
-
-    Image {
-        id: black_rock1
-        width: 45; height: 45
-        source: "images/black_rook.png"
-        x: grid.getX(0)
-        y: grid.getY(7)
-    }
-
-    Image {
-        id: black_rock2
-        width: 45; height: 45
-        source: "images/black_rook.png"
-        x: grid.getX(7)
-        y: grid.getY(7)
-    }
-
-    /* ===== Chevaux Blancs ======= */
+    /* ===== Chevaux Noirs ======= */
 
     Image {
         id: black_knight1
         width: 45; height: 45
-        source: "images/black_knight.png"
+        source: mouseAreaB3.containsMouse ?"images/Click_"+sqColor(black_knight1.x,black_knight1.y)+"_black_knight.png" : "images/black_knight.png"
         x: grid.getX(1)
-        y: grid.getY(7)
+        y: grid.getY(7-0)
+        MouseArea {
+                id : mouseAreaB3
+                anchors.fill : parent
+                hoverEnabled : true
+        }
     }
 
     Image {
         id: black_knight2
         width: 45; height: 45
-        source: "images/black_knight.png"
+        source: mouseAreaB4.containsMouse ?"images/Click_"+sqColor(black_knight2.x,black_knight2.y)+"_black_knight.png" : "images/black_knight.png"
         x: grid.getX(6)
-        y: grid.getY(7)
+        y: grid.getY(7-0)
+        MouseArea {
+                id : mouseAreaB4
+                anchors.fill : parent
+                hoverEnabled : true
+        }
     }
 
-    /* ======= Fous Blancs ======= */
 
+
+      /* ==== Pions Noirs ========== */
     Image {
-        id: black_bishop1
+        id: black_pawn1
         width: 45; height: 45
-        source: "images/black_bishop.png"
+        source: mouseAreaB51.containsMouse ?"images/Click_"+sqColor(black_pawn1.x,black_pawn1.y)+"_black_pawn.png" : "images/black_pawn.png"
+        x: grid.getX(0)
+        y: grid.getY(7-1)
+
+        MouseArea {
+                id : mouseAreaB51
+                anchors.fill : parent
+                hoverEnabled : true
+        }
+
+    }
+    Image {
+        id: black_pawn2
+        width: 45; height: 45
+        source: mouseAreaB52.containsMouse ?"images/Click_"+sqColor(black_pawn2.x,black_pawn2.y)+"_black_pawn.png" : "images/black_pawn.png"
+        x: grid.getX(1)
+        y: grid.getY(7-1)
+        MouseArea {
+                id : mouseAreaB52
+                anchors.fill : parent
+                hoverEnabled : true
+        }
+
+    }
+    Image {
+        id: black_pawn3
+        width: 45; height: 45
+        source: mouseAreaB53.containsMouse ?"images/Click_"+sqColor(black_pawn3.x,black_pawn3.y)+"_black_pawn.png" : "images/black_pawn.png"
         x: grid.getX(2)
-        y: grid.getY(7)
-    }
+        y: grid.getY(7-1)
+       MouseArea {
+                id : mouseAreaB53
+                anchors.fill : parent
+                hoverEnabled : true
+        }
 
-    Image {
-        id: black_bishop2
-        width: 45; height: 45
-        source: "images/black_bishop.png"
-        x: grid.getX(5)
-        y: grid.getY(7)
     }
-
-    /* ======= Reine blanche =========== */
     Image {
-        id: black_queen
+        id: black_pawn4
         width: 45; height: 45
-        source: "images/black_queen.png"
+       source: mouseAreaB54.containsMouse ?"images/Click_"+sqColor(black_pawn4.x,black_pawn4.y)+"_black_pawn.png" : "images/black_pawn.png"
         x: grid.getX(3)
-        y: grid.getY(7)
+        y: grid.getY(7-1)
+        MouseArea {
+                id : mouseAreaB54
+                anchors.fill : parent
+                hoverEnabled : true
+        }
+
+    }
+    Image {
+        id: black_pawn5
+        width: 45; height: 45
+        source: mouseAreaB55.containsMouse ?"images/Click_"+sqColor(black_pawn5.x,black_pawn5.y)+"_black_pawn.png" : "images/black_pawn.png"
+        x: grid.getX(4)
+        y: grid.getY(7-1)
+        MouseArea {
+                id : mouseAreaB55
+                anchors.fill : parent
+                hoverEnabled : true
+        }
+
+    }
+    Image {
+        id: black_pawn6
+        width: 45; height: 45
+        source: mouseAreaB56.containsMouse ?"images/Click_"+sqColor(black_pawn6.x,black_pawn6.y)+"_black_pawn.png" : "images/black_pawn.png"
+        x: grid.getX(5)
+        y: grid.getY(7-1)
+        MouseArea {
+                id : mouseAreaB56
+                anchors.fill : parent
+                hoverEnabled : true
+        }
+
+    }
+    Image {
+        id: black_pawn7
+        width: 45; height: 45
+        source: mouseAreaB57.containsMouse ?"images/Click_"+sqColor(black_pawn7.x,black_pawn7.y)+"_black_pawn.png" : "images/black_pawn.png"
+        x: grid.getX(6)
+        y: grid.getY(7-1)
+        MouseArea {
+                id : mouseAreaB57
+                anchors.fill : parent
+                hoverEnabled : true
+        }
+
+    }
+    Image {
+        id: black_pawn8
+        width: 45; height: 45
+        source: mouseAreaB58.containsMouse ?"images/Click_"+sqColor(black_pawn8.x,black_pawn8.y)+"_black_pawn.png" : "images/black_pawn.png"
+        x: grid.getX(7)
+        y: grid.getY(7-1)
+        MouseArea {
+                id : mouseAreaB58
+                anchors.fill : parent
+                hoverEnabled : true
+        }
+
     }
 
-    /* ========= Roi Blanc ============== */
-    Image {
-        id: black_king
-        width: 45; height: 45
-        source: "images/black_king.png"
-        x: grid.getX(4)
-        y: grid.getY(7)
+/* ======= Reine Noire =========== */
+Image {
+    id: black_queen
+    width: 45; height: 45
+    source: mouseAreaB6.containsMouse ?"images/Click_"+sqColor(black_queen.x,black_queen.y)+"_black_queen.png" : "images/black_queen.png"
+    x: grid.getX(3)
+    y: grid.getY(7-0)
+    MouseArea {
+            id : mouseAreaB6
+            anchors.fill : parent
+            hoverEnabled : true
     }
+}
+
+
+/* ==== Tours Noires === */
+
+Image {
+    id: black_rook1
+    width: 45; height: 45
+   source: mouseAreaB7.containsMouse ?"images/Click_"+sqColor(black_rook1.x,black_rook1.y)+"_black_rook.png" : "images/black_rook.png"
+    x: grid.getX(0)
+    y: grid.getY(7-0)
+    MouseArea {
+            id : mouseAreaB7
+            anchors.fill : parent
+            hoverEnabled : true
+    }
+}
+
+Image {
+    id: black_rook2
+    width: 45; height: 45
+    source: mouseAreaB8.containsMouse ?"images/Click_"+sqColor(black_rook2.x,black_rook2.y)+"_black_rook.png" : "images/black_rook.png"
+    x: grid.getX(7)
+    y: grid.getY(7-0)
+    MouseArea {
+            id : mouseAreaB8
+            anchors.fill : parent
+            hoverEnabled : true
+    }
+}
 }
 
 
