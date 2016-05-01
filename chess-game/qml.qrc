@@ -18,5 +18,37 @@
         <file>images/black_rook.png</file>
         <file>images/click_dark.png</file>
         <file>images/click_light.png</file>
+        <file>images/avail_dark.png</file>
+        <file>images/avail_light.png</file>
+        <file>images/Threat_bishop.png</file>
+        <file>images/Threat_knight.png</file>
+        <file>images/Threat_pawn.png</file>
+        <file>images/Threat_queen.png</file>
+        <file>images/Threat_rook.png</file>
+        <file>images/Threat_king.png</file>
+        <file>images/Click_dark_white_bishop.png</file>
+        <file>images/Click_dark_black_bishop.png</file>
+        <file>images/Click_dark_black_king.png</file>
+        <file>images/Click_dark_black_knight.png</file>
+        <file>images/Click_dark_black_pawn.png</file>
+        <file>images/Click_dark_black_queen.png</file>
+        <file>images/Click_dark_black_rook.png</file>
+        <file>images/Click_dark_white_king.png</file>
+        <file>images/Click_dark_white_knight.png</file>
+        <file>images/Click_dark_white_pawn.png</file>
+        <file>images/Click_dark_white_queen.png</file>
+        <file>images/Click_dark_white_rook.png</file>
+        <file>images/Click_light_black_bishop.png</file>
+        <file>images/Click_light_black_king.png</file>
+        <file>images/Click_light_black_knight.png</file>
+        <file>images/Click_light_black_pawn.png</file>
+        <file>images/Click_light_black_queen.png</file>
+        <file>images/Click_light_black_rook.png</file>
+        <file>images/Click_light_white_bishop.png</file>
+        <file>images/Click_light_white_king.png</file>
+        <file>images/Click_light_white_knight.png</file>
+        <file>images/Click_light_white_pawn.png</file>
+        <file>images/Click_light_white_queen.png</file>
+        <file>images/Click_light_white_rook.png</file>
     </qresource>
 </RCC>
